@@ -50,10 +50,12 @@ uv venv
 ### 2) 依赖（开发依赖 / 锁大版本或小版本 / lock & sync）
 
 ```bash
+uv add pytorch # 运行时
 uv add --dev ruff pytest
 # 添加开发依赖：写入 pyproject.toml（dev 组）并通常会更新 uv.lock + 同步环境
 
-uv sync
+uv sync --no-dev # 部署环境（只装运行时）
+uv sync # 运行时 + 默认 groups（通常包含 dev，取决于你的配置）
 # 同步环境：把 .venv 安装成 uv.lock 指定的精确版本集合
 # 默认行为：如果发现 uv.lock 与 pyproject.toml 不一致，会先 re-lock（等价需要时执行 uv lock）
 ```
