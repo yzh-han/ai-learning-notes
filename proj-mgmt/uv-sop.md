@@ -17,7 +17,7 @@ uv --version
 ### 1) 初始化（项目骨架 + Python 版本 + venv）
 
 ```bash
-uv init myproj && cd myproj
+uv init myproj && cd myproj --python 3.12
 # 创建初始目录结构（包含 pyproject.toml、README、示例 main.py 等）
 # 或者在项目文件中 uv init
 # --package：创建可安装的包（有包目录、版本、构建后端配置等）默认。
