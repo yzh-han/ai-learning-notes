@@ -19,6 +19,9 @@ uv --version
 ```bash
 uv init myproj && cd myproj
 # 创建初始目录结构（包含 pyproject.toml、README、示例 main.py 等）
+# 或者在项目文件中 uv init
+# --package：创建可安装的包（有包目录、版本、构建后端配置等）默认。
+# --no-package：偏脚本/应用（可能不创建包目录，或不配置 build 相关字段）。
 
 uv python install 3.12
 # 可选：让 uv 自己下载并管理 Python 3.12（managed Python）
